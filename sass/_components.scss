@@ -22,13 +22,68 @@ body {
   }
 }
 
-//main
-.hero {
-  .hero_img {
-  }
+//hero
 
-  .hero_video {
-    // show this property in desktop and tablet
-    display: none;
+.hero_contents {
+  .main-name {
+    @include textStyles(uppercase);
+    text-align: center;
+    font-size: 5.8rem;
   }
+}
+.start_btn,
+.plan_btn {
+  // background-color: white;
+  // display: block;
+  // padding: 16px;
+  color: $color-white;
+  font-size: 1.2rem;
+  width: 180px;
+  height: 40px;
+  line-height: 0;
+  padding: 24px 50px;
+  font-family: $font-sans;
+  border: none;
+  border-radius: 16px;
+  background: $color-primary;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 27, 0, 1) 0%,
+    rgba(251, 75, 2, 1) 100%
+  );
+
+  &:hover {
+    background: $color-primary;
+    background: transparent;
+    box-shadow: none;
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: $color-primary;
+    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
+      4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+  }
+  &:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+  &:hover:before,
+  &:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+  }
+}
+
+.hero_video {
+  // 後で：show this property in desktop and tablet
+  display: none;
 }

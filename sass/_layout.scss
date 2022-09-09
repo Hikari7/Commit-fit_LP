@@ -4,7 +4,7 @@
 
 .header {
   @include flexLayout;
-//   outline: red 1px solid;
+  outline: red 1px solid;
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;
@@ -22,4 +22,15 @@
     url(../img/graham-mansfield-E8VOttj22s4-unsplash.jpg);
   background-size: cover;
   background-position: center;
+
+  .main-name {
+    @include centering(45%);
+  }
+
+  .plan_btn {
+    @include centering(65%);
+  }
+  .start_btn {
+    @include centering(75%);
+  }
 }
