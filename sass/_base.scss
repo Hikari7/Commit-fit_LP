@@ -1,0 +1,73 @@
+$color-primary: #e04a4c;
+$color-secondary: #37888a;
+$color-white: #fff;
+$colo-black: #222222;
+
+// $font-arimo: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-sans: "Open Sans", sans-serif;
+
+@mixin flexLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textStyles($transform: uppercase) {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: $transform;
+}
+
+@mixin centering($topValue) {
+  position: absolute;
+  top: $topValue;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #222222,
+    #222223,
+    #212224,
+    #202325,
+    #1e2325,
+    #202b2d,
+    #233335,
+    #253b3b,
+    #2b4d4e,
+    #306061,
+    #347475,
+    #37888a
+  );
+
+  // background-image: linear-gradient(
+  //   to right top,
+  //   #151b1b,
+  //   #192020,
+  //   #1d2424,
+  //   #212929,
+  //   #252e2e,
+  //   #293636,
+  //   #2d3f3f,
+  //   #314848,
+  //   #345758,
+  //   #366768,
+  //   #377779,
+  //   #37888a
+  // );
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}

@@ -1,0 +1,34 @@
+@use "base" as *;
+
+//common
+body {
+  color: $color-white;
+  font-family: $font-sans;
+}
+
+//header
+.logo {
+  display: block;
+}
+
+.nav_menu {
+  display: none;
+}
+
+.header_mobile {
+  & i {
+    font-size: 2.4rem;
+    cursor: pointer;
+  }
+}
+
+//main
+.hero {
+  .hero_img {
+  }
+
+  .hero_video {
+    // show this property in desktop and tablet
+    display: none;
+  }
+}
