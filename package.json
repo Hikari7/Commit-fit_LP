@@ -1,0 +1,16 @@
+{
+  "name": "commit-build_lp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/main.css -w",
+    "dev": "serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.54.9"
+  }
+}
