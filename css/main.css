@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
 }
@@ -29,7 +30,7 @@ a {
 
 .hero {
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: capitalize;
   width: 100%;
   height: 100vh;
@@ -82,13 +83,18 @@ a {
 
 .section {
   width: 86%;
-  margin: 0 auto;
+  margin: 56px auto;
 }
 
 .section_title {
   text-align: center;
   display: block;
-  padding-top: 24px;
+}
+
+.section_desc {
+  display: block;
+  margin: 42px auto;
+  width: 78%;
 }
 
 .section_pic img {
@@ -97,12 +103,6 @@ a {
   justify-content: center;
   width: 90%;
   height: 40%;
-}
-
-.about_desc .section_desc {
-  display: block;
-  margin: 42px auto;
-  width: 78%;
 }
 
 .about_list {
@@ -120,13 +120,33 @@ a {
 }
 
 .about_item {
-  border: 2px solid red;
   margin-top: 24px;
   text-align: center;
   align-items: center;
   padding: 24px;
   height: 180px;
 }
+
+.plan_cards {
+  width: 80%;
+  margin: 24px auto;
+}
+
+.card {
+  outline: #fff solid 1px;
+  margin-top: 24px;
+}
+
+.card_content {
+  width: 80%;
+  margin: 36px auto;
+  padding: 16px 0;
+}
+
+.card_desc {
+  margin-top: 16px;
+}
+
 body {
   color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -147,7 +167,7 @@ body {
 
 .hero_contents .main-name {
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
   font-size: 5.8rem;
@@ -213,7 +233,7 @@ body {
 
 .search-container .search_title {
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 3.6rem;
 }
@@ -258,13 +278,13 @@ input#search-bar:focus:-ms-placeholder {
 
 .section_title {
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: capitalize;
   font-size: 3.6rem;
   color: #e04a4c;
 }
 
-.about_desc {
+.section_desc {
   letter-spacing: 2px;
   line-height: 1.8;
   font-size: 1.8rem;
@@ -274,7 +294,7 @@ input#search-bar:focus:-ms-placeholder {
   font-size: 4.2rem;
 }
 .about_list p {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .about_item {
@@ -292,6 +312,41 @@ input#search-bar:focus:-ms-placeholder {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   transition: 800ms ease all;
+}
+
+.plans .start_btn {
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.price {
+  font-size: 3.6rem;
+}
+.price span {
+  font-size: 1.8rem;
+}
+
+.card_desc {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.card_ul {
+  margin: 16px 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card_li {
+  font-size: 1.6rem;
+}
+.card_li::marker {
+  content: counter(list-item) "› ";
 }
 
 /*# sourceMappingURL=main.css.map */

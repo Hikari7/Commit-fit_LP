@@ -7,6 +7,7 @@ $colo-black: #222222;
 $font-sans: "Open Sans", sans-serif;
 
 $font-size-sub: 3.6rem;
+$font-size-price: 2.8rem;
 $font-size-desc: 1.8rem;
 
 @mixin flexLayout {
@@ -17,7 +18,7 @@ $font-size-desc: 1.8rem;
 
 @mixin textStyles($transform: uppercase) {
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: $transform;
 }
 
