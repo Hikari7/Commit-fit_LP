@@ -13,6 +13,8 @@
   font-weight: 300;
 }
 
+//hero
+
 .hero {
   @include textStyles(capitalize);
   width: 100%;
@@ -32,5 +34,82 @@
   }
   .start_btn {
     @include centering(75%);
+  }
+}
+
+//search
+
+.search-container {
+  @include centering(55%);
+  width: 300px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.search_place {
+  position: relative;
+
+  height: 20vh;
+  text-align: center;
+
+  .search_title {
+    @include centering(25%);
+    font-size: 3.6rem;
+  }
+}
+
+//section: about
+
+.section {
+  //   outline: 2px solid red;
+  width: 86%;
+  margin: 0 auto;
+}
+.section_title {
+  text-align: center;
+  display: block;
+  padding-top: 24px;
+}
+
+.section_pic img {
+  display: block;
+  margin: 42px auto;
+  justify-content: center;
+  width: 90%;
+  height: 40%;
+}
+
+.about_desc {
+  .section_desc {
+    display: block;
+    margin: 42px auto;
+    width: 78%;
+  }
+}
+
+.about_list {
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  width: 78%;
+  display: flex;
+  gap: 10%;
+}
+
+.about_upper,
+.about_bottom {
+  width: 50%;
+}
+
+.about_item {
+  border: 2px solid red;
+  margin-top: 24px;
+  text-align: center;
+  align-items: center;
+  padding: 24px;
+  height: 180px;
+
+  p {
+    // margin-top: 16px;
   }
 }

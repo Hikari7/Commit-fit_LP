@@ -6,6 +6,9 @@ $colo-black: #222222;
 // $font-arimo: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-sans: "Open Sans", sans-serif;
 
+$font-size-sub: 3.6rem;
+$font-size-desc: 1.8rem;
+
 @mixin flexLayout {
   display: flex;
   justify-content: center;
