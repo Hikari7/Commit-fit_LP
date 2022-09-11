@@ -136,22 +136,25 @@
   margin-top: 16px;
 }
 
-//Contact us
+//Contact
 
-.contact_main {
-  position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
-    url(../img/sven-mieke-jO6vBWX9h9Y-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 500px;
+.contact {
+  margin: 24px auto;
+  .contact_main {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../img/sven-mieke-jO6vBWX9h9Y-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
 
-  .main-name {
-    @include centering(35%);
-  }
+    .main-name {
+      @include centering(35%);
+    }
 
-  .start_btn {
-    @include centering(55%);
+    .start_btn {
+      @include centering(55%);
+    }
   }
 }
 
@@ -163,7 +166,27 @@
     margin-top: 24px;
   }
 
-  .contact_container{
+  .contact_container {
     margin: 24px auto;
+  }
+}
+
+//footer
+.footer {
+  margin: 100px 0;
+  text-align: center;
+
+  .footer_subtitle {
+    margin-top: 8px;
+  }
+  .media_icons {
+    width: 300px;
+    justify-content: space-between;
+    margin: 56px auto;
+    display: flex;
+  }
+
+  .copyright {
+    margin-top: 56px;
   }
 }

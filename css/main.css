@@ -154,20 +154,23 @@ a {
   margin-top: 16px;
 }
 
-.contact_main {
+.contact {
+  margin: 24px auto;
+}
+.contact .contact_main {
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/sven-mieke-jO6vBWX9h9Y-unsplash.jpg);
   background-size: cover;
   background-position: center;
   height: 500px;
 }
-.contact_main .main-name {
+.contact .contact_main .main-name {
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.contact_main .start_btn {
+.contact .contact_main .start_btn {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -183,6 +186,23 @@ a {
 }
 .contact_form .contact_container {
   margin: 24px auto;
+}
+
+.footer {
+  margin: 100px 0;
+  text-align: center;
+}
+.footer .footer_subtitle {
+  margin-top: 8px;
+}
+.footer .media_icons {
+  width: 300px;
+  justify-content: space-between;
+  margin: 56px auto;
+  display: flex;
+}
+.footer .copyright {
+  margin-top: 56px;
 }
 
 body {
@@ -504,6 +524,10 @@ input#search-bar:hover:-ms-placeholder {
   width: 100%;
   transition: 800ms ease all;
 }
+.contact .contact_form {
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
 .contact .contact_label,
 .contact .contact_desc {
   font-size: 2rem;
@@ -551,6 +575,23 @@ input#email-bar:hover:-ms-placeholder {
 .submit:hover {
   color: #ebebeb;
   background-color: #e04a4c;
+  transition: 0.35s ease;
+}
+
+.footer {
+  color: #ebebeb;
+  font-size: "PT Sans", sans-serif;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.footer .footer_title {
+  font-size: 16px;
+}
+.footer .media_icons {
+  font-size: 24px;
+}
+.footer .media_icons .media_icon:hover {
+  color: #e04a4c;
+  cursor: pointer;
   transition: 0.35s ease;
 }
 
