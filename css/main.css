@@ -13,7 +13,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #ebebeb;
 }
 
 .header {
@@ -29,12 +29,11 @@ a {
 }
 
 .hero {
-  font-weight: 300;
+  color: #e04a4c;
   letter-spacing: 1px;
   text-transform: capitalize;
   width: 100%;
   height: 100vh;
-  color: #e04a4c;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/graham-mansfield-E8VOttj22s4-unsplash.jpg);
   background-size: cover;
   background-position: center;
@@ -155,12 +154,44 @@ a {
   margin-top: 16px;
 }
 
+.contact_main {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/sven-mieke-jO6vBWX9h9Y-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+.contact_main .main-name {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contact_main .start_btn {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact_form {
+  text-align: center;
+  margin-top: 24px;
+}
+.contact_form .contact_desc {
+  margin-top: 24px;
+}
+.contact_form .contact_container {
+  margin: 24px auto;
+}
+
 body {
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
+  color: #ebebeb;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .logo {
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: block;
 }
 
@@ -174,7 +205,7 @@ body {
 }
 
 .hero_contents .main-name {
-  font-weight: 300;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
@@ -183,7 +214,7 @@ body {
 
 .start_btn,
 .plan_btn {
-  color: #fff;
+  color: #ebebeb;
   font-size: 1.8rem;
   width: 160px;
   height: 55px;
@@ -237,12 +268,16 @@ body {
   backdrop-filter: blur(14.8px);
   -webkit-backdrop-filter: blur(14.8px);
 }
-
-.search-container .search_title {
-  font-weight: 300;
+.search_place .search_title {
+  width: 500px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 3.6rem;
+}
+
+.search-container {
+  margin-top: 16px;
 }
 .search-container i {
   display: block;
@@ -261,30 +296,30 @@ input#search-bar {
   height: 45px;
   padding: 0 20px;
   font-size: 1.8rem;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #ebebeb;
+  border: 1px solid #ebebeb;
   outline: none;
 }
-input#search-bar:focus {
+input#search-bar:hover {
   border: 1px solid #e04a4c;
   transition: 0.35s ease;
-  color: #fff;
+  color: #ebebeb;
 }
-input#search-bar:focus::-webkit-input-placeholder {
+input#search-bar:hover::-webkit-input-placeholder {
   transition: opacity 0.45s ease;
   opacity: 0;
 }
-input#search-bar:focus::-moz-placeholder {
+input#search-bar:hover::-moz-placeholder {
   transition: opacity 0.45s ease;
   opacity: 0;
 }
-input#search-bar:focus:-ms-placeholder {
+input#search-bar:hover:-ms-placeholder {
   transition: opacity 0.45s ease;
   opacity: 0;
 }
 
 .section_title {
-  font-weight: 300;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: capitalize;
   font-size: 3.6rem;
@@ -292,9 +327,11 @@ input#search-bar:focus:-ms-placeholder {
 }
 
 .section_desc {
+  text-align: center;
   letter-spacing: 2px;
-  line-height: 1.8;
-  font-size: 1.8rem;
+  line-height: 1.6;
+  font-size: 2rem;
+  font-family: "PT Sans", sans-serif;
 }
 
 .about_list {
@@ -322,9 +359,10 @@ input#search-bar:focus:-ms-placeholder {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .about_item .num_content {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   position: absolute;
   top: 65%;
   left: 50%;
@@ -355,21 +393,21 @@ input#search-bar:focus:-ms-placeholder {
 }
 
 .card_desc {
-  font-size: 1.8rem;
-  font-weight: 300;
+  font-family: "PT Sans", sans-serif;
+  font-size: 2rem;
+  line-height: 1.4;
   letter-spacing: 1px;
   text-transform: capitalize;
 }
 
 .card_ul {
   line-height: 2;
-  font-weight: 300;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .card_li {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 .card_li::marker {
   content: counter(list-item) "› ";
@@ -384,7 +422,7 @@ input#search-bar:focus:-ms-placeholder {
 }
 
 .start_btn {
-  color: #fff;
+  color: #ebebeb;
   font-size: 1.8rem;
   width: 160px;
   height: 55px;
@@ -422,6 +460,98 @@ input#search-bar:focus:-ms-placeholder {
 .start_btn:hover:before, .start_btn:hover:after {
   width: 100%;
   transition: 800ms ease all;
+}
+
+.contact .main-name {
+  color: #e04a4c;
+  font-size: 5.8rem;
+}
+.contact .start_btn {
+  color: #ebebeb;
+  font-size: 1.8rem;
+  width: 160px;
+  height: 55px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: #e04a4c;
+  background: linear-gradient(0deg, rgb(172, 55, 4) 100% rgb(230, 64, 67) 0%);
+}
+.contact .start_btn:hover {
+  color: #e04a4c;
+  background: transparent;
+  box-shadow: none;
+}
+.contact .start_btn:before, .contact .start_btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 100%;
+  right: 0;
+  height: 1px;
+  width: 0;
+  background: #e04a4c;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.1333333333);
+  transition: 400ms ease all;
+}
+.contact .start_btn:after {
+  right: inherit;
+  top: 100%;
+  left: 0;
+  bottom: 0;
+}
+.contact .start_btn:hover:before, .contact .start_btn:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+.contact .contact_label,
+.contact .contact_desc {
+  font-size: 2rem;
+}
+.contact .contact_container {
+  width: 300px;
+  font-size: 2rem;
+  display: flex;
+}
+
+input#email-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1.8rem;
+  color: #ebebeb;
+  border: 1px solid #ebebeb;
+  outline: none;
+}
+input#email-bar:hover {
+  border: 1px solid #e04a4c;
+  transition: 0.35s ease;
+  color: #ebebeb;
+}
+input#email-bar:hover::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#email-bar:hover::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#email-bar:hover:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+.submit {
+  background-color: #ebebeb;
+  font-size: 1.6rem;
+  width: 100px;
+  cursor: pointer;
+}
+.submit:hover {
+  color: #ebebeb;
+  background-color: #e04a4c;
+  transition: 0.35s ease;
 }
 
 /*# sourceMappingURL=main.css.map */

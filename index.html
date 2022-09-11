@@ -15,9 +15,10 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display|PT+Sans:wght@700=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -95,7 +96,8 @@
           <p class="section_desc">
             Commit Fit offers daily workouts fit for any level. Pick a plan, and
             get build your muscles at a fraction of the cost of a personal
-            trainer. No pain no gain as committing to muscles.
+            trainer.<br />
+            No pain no gain as committing to muscles.
           </p>
           <ul class="about_list">
             <div class="about_upper">
@@ -196,21 +198,25 @@
           </div>
         </div>
       </section>
-      <section class="Contact us">
-        <h2>Are You Ready?</h2>
-        <div class="about_pic">
-          <img
-            src="./img/sven-mieke-jO6vBWX9h9Y-unsplash.jpg"
-            alt="workout_pic"
-            width="300px"
-            height="300px"
-          />
+      <section class="contact">
+        <div class="contact_main">
+          <h2 class="main-name">Are You Ready?</h2>
+          <div class="about_pic"></div>
+          <button class="start_btn">Get Started</button>
         </div>
-        <button class="mainbtn">Get Started</button>
-        <p>or Subscribe for gym updates below</p>
-        <label for="email">Enter your email: </label>
-        <input type="email" name="email" id="email" />
-        <input type="submit" value="Subscribe!" />
+        <div class="contact_form">
+          <p class="contact_desc">or <br />Subscribe for gym updates below</p>
+
+          <!-- <form class="search-container">
+            <input type="text" id="search-bar" placeholder="Zip code" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </form> -->
+          <label for="email" class="contact_label">Enter your email: </label>
+          <form class="contact_container">
+            <input type="email" id="email-bar" placeholder="Email address" />
+            <input type="submit" class="submit" value="Send" />
+          </form>
+        </div>
       </section>
     </main>
     <footer>
