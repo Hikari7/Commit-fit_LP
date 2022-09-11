@@ -33,45 +33,7 @@ body {
 
 .start_btn,
 .plan_btn {
-  color: $color-white;
-  font-size: 1.8rem;
-  width: 160px;
-  height: 55px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  background: $color-primary;
-  background: linear-gradient(0deg, rgb(172, 55, 4) 100% rgb(230, 64, 67) 0%);
-
-  &:hover {
-    color: $color-primary;
-    background: transparent;
-    box-shadow: none;
-  }
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: $color-primary;
-    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
-      4px 4px 5px 0px #0002;
-    transition: 400ms ease all;
-  }
-  &:after {
-    right: inherit;
-    top: 100%;
-    left: 0;
-    bottom: 0;
-  }
-  &:hover:before,
-  &:hover:after {
-    width: 100%;
-    transition: 800ms ease all;
-  }
+  @include main_btn;
 }
 
 .hero_video {
@@ -79,11 +41,9 @@ body {
   display: none;
 }
 
-//search_place
+// //search_place
 
 .search_place {
-  /* From https://css.glass */
-  /* From https://css.glass */
   background: rgba(55, 136, 138, 0.8);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(14.8px);
@@ -137,7 +97,6 @@ input#search-bar {
 }
 
 //section_common
-
 .section_title {
   @include textStyles(capitalize);
   font-size: $font-size-sub;
@@ -153,20 +112,10 @@ input#search-bar {
 //section_about
 .about_list {
   font-size: 4.2rem;
-
-  p {
-    font-size: 1.6rem;
-  }
 }
 
 .about_item {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
+  @include card_bg;
   &:hover {
     background: transparent;
     background: rgba(224, 74, 76, 0.46);
@@ -175,29 +124,31 @@ input#search-bar {
     -webkit-backdrop-filter: blur(5px);
     transition: 800ms ease all;
   }
+
+  .num {
+    @include centering(35%);
+  }
+  .num_content {
+    font-size: 1.6rem;
+    @include centering(65%);
+  }
 }
 
 //section_plan
 
-.plans {
-  // position: relative;
-  .start_btn {
-    display: block;
-    align-items: center;
-    text-align: center;
-    margin-top: 16px;
-
-    // @include centering(80%);
-  }
+.card {
+  @include card_bg;
 }
 
-.plans_cards {
-  .price_type {
-  }
+.price_type {
+  font-size: 1.4rem;
+  background-color: $color-secondary;
+  border-radius: 16px;
+  margin-bottom: 16px;
 }
 
 .price {
-  font-size: $font-size-sub;
+  font-size: $font-size-price;
   span {
     font-size: 1.8rem;
   }
@@ -209,7 +160,7 @@ input#search-bar {
 }
 
 .card_ul {
-  margin: 16px 0;
+  line-height: 2;
   @include textStyles(uppercase);
 }
 
@@ -218,4 +169,22 @@ input#search-bar {
   &::marker {
     content: counter(list-item) "› ";
   }
+
+  &.standard:nth-child(3),
+  &.standard:nth-child(4),
+  &.standard:nth-child(5) {
+    text-decoration: line-through;
+    color: #999999;
+  }
+
+  &.medium:nth-child(4),
+  &.medium:nth-child(5) {
+    text-decoration: line-through;
+    color: #999999;
+  }
+}
+.start_btn {
+  @include main_btn;
+  display: block;
+  margin: 36px auto 0;
 }
