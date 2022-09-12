@@ -39,7 +39,7 @@ body {
 
 .hero_video {
   // 後で：show this property in desktop and tablet
-  display: none;
+  // display: none;
 }
 
 // //search_place
@@ -195,6 +195,7 @@ input#search-bar {
   }
 
   .contact_container {
+    font-family: $font-sub;
     width: 300px;
     font-size: $font-size-desc;
     display: flex;

@@ -32,11 +32,16 @@ a {
   color: #e04a4c;
   letter-spacing: 1px;
   text-transform: capitalize;
+}
+.hero .hero_img {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/graham-mansfield-E8VOttj22s4-unsplash.jpg);
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(0, 0, 0, 0.6)), url(../img/graham-mansfield-E8VOttj22s4-unsplash.jpg);
   background-size: cover;
   background-position: center;
+}
+.hero .video_wrap {
+  display: none;
 }
 .hero .main-name {
   position: absolute;
@@ -55,6 +60,34 @@ a {
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .hero .hero_img {
+    display: none;
+  }
+  .hero .video_wrap {
+    display: block;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  .hero .video_wrap:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(rgba(19, 19, 19, 0.8), rgba(0, 0, 0, 0.6));
+    background-size: cover;
+    background-position: center;
+  }
+}
+.hero .hero_contents {
+  z-index: 3;
 }
 
 .search-container {
@@ -184,8 +217,12 @@ a {
 .contact_form .contact_desc {
   margin-top: 24px;
 }
+.contact_form .contact_label {
+  display: block;
+  margin-top: 36px;
+}
 .contact_form .contact_container {
-  margin: 24px auto;
+  margin: 12px auto;
 }
 
 .footer {
@@ -234,6 +271,7 @@ body {
 
 .start_btn,
 .plan_btn {
+  font-family: "PT Sans", sans-serif;
   color: #ebebeb;
   font-size: 1.8rem;
   width: 160px;
@@ -242,7 +280,8 @@ body {
   padding: 0;
   border: none;
   background: #e04a4c;
-  background: linear-gradient(0deg, rgb(172, 55, 4) 100% rgb(230, 64, 67) 0%);
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #c52428, #c72629, #c9272a, #cc292b, #ce2a2c, #d02d2f, #d33133, #d53436, #d83a3c, #db3f41, #dd4547, #e04a4c);
 }
 .start_btn:hover,
 .plan_btn:hover {
@@ -276,10 +315,6 @@ body {
 .plan_btn:hover:after {
   width: 100%;
   transition: 800ms ease all;
-}
-
-.hero_video {
-  display: none;
 }
 
 .search_place {
@@ -442,6 +477,7 @@ input#search-bar:hover:-ms-placeholder {
 }
 
 .start_btn {
+  font-family: "PT Sans", sans-serif;
   color: #ebebeb;
   font-size: 1.8rem;
   width: 160px;
@@ -450,7 +486,8 @@ input#search-bar:hover:-ms-placeholder {
   padding: 0;
   border: none;
   background: #e04a4c;
-  background: linear-gradient(0deg, rgb(172, 55, 4) 100% rgb(230, 64, 67) 0%);
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #c52428, #c72629, #c9272a, #cc292b, #ce2a2c, #d02d2f, #d33133, #d53436, #d83a3c, #db3f41, #dd4547, #e04a4c);
   display: block;
   margin: 36px auto 0;
 }
@@ -487,6 +524,7 @@ input#search-bar:hover:-ms-placeholder {
   font-size: 5.8rem;
 }
 .contact .start_btn {
+  font-family: "PT Sans", sans-serif;
   color: #ebebeb;
   font-size: 1.8rem;
   width: 160px;
@@ -495,7 +533,8 @@ input#search-bar:hover:-ms-placeholder {
   padding: 0;
   border: none;
   background: #e04a4c;
-  background: linear-gradient(0deg, rgb(172, 55, 4) 100% rgb(230, 64, 67) 0%);
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #c52428, #c72629, #c9272a, #cc292b, #ce2a2c, #d02d2f, #d33133, #d53436, #d83a3c, #db3f41, #dd4547, #e04a4c);
 }
 .contact .start_btn:hover {
   color: #e04a4c;
@@ -533,6 +572,7 @@ input#search-bar:hover:-ms-placeholder {
   font-size: 2rem;
 }
 .contact .contact_container {
+  font-family: "PT Sans", sans-serif;
   width: 300px;
   font-size: 2rem;
   display: flex;

@@ -52,22 +52,27 @@
     <!-- main -->
     <main>
       <section class="hero">
-        <div class="hero-wrap">
-          <!-- <img
-            src="./img/graham-mansfield-E8VOttj22s4-unsplash.jpg"
-            alt="Placeholder"
-            class="hero_img"
+        <div class="hero_wrap">
+          <div class="hero_img">
+            <!-- <img
+              src="./img/graham-mansfield-E8VOttj22s4-unsplash.jpg"
+              alt="Placeholder"
+              class="hero_pic"
             /> -->
-          <video
-            src="./img/mixkit-man-and-woman-using-russian-kettlebell-727.mp4"
-            autoplay
-            loop
-            muted
-            playsinline
-            class="hero_video"
-          >
-            -->
-          </video>
+          </div>
+
+          <div class="video_wrap">
+            <video
+              src="./img/mixkit-man-and-woman-using-russian-kettlebell-727.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+            >
+              <img src="../img/graham-mansfield-E8VOttj22s4-unsplash.jpg" />
+            </video>
+          </div>
+
           <div class="hero_contents">
             <h1 class="main-name">Commit to your<br />Body</h1>
           </div>
@@ -102,21 +107,21 @@
           <ul class="about_list">
             <div class="about_upper">
               <li class="about_item">
-                <p class="num">3k&plus;</p>
+                <h3 class="num">3k&plus;</h3>
                 <p class="num_content">Total Members</p>
               </li>
               <li class="about_item">
-                <p class="num">300&plus;</p>
+                <h3 class="num">300&plus;</h3>
                 <p class="num_content">Locations</p>
               </li>
             </div>
             <div class="about_bottom">
               <li class="about_item">
-                <p class="num">25&plus;</p>
+                <h3 class="num">25&plus;</h3>
                 <p class="num_content">Programs</p>
               </li>
               <li class="about_item">
-                <p class="num">200&plus;</p>
+                <h3 class="num">200&plus;</h3>
                 <p class="num_content">Professional&ensp;Trainers</p>
               </li>
             </div>
@@ -206,6 +211,7 @@
         </div>
         <div class="contact_form">
           <p class="contact_desc">or <br />Subscribe for gym updates below</p>
+
           <label for="email" class="contact_label">Enter your email: </label>
           <form class="contact_container">
             <input type="email" id="email-bar" placeholder="Email address" />

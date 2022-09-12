@@ -5,13 +5,27 @@ $color-white: #ebebeb;
 $font-main: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
   sans-serif;
 $font-sub: "PT Sans", sans-serif;
-// $font-main: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-// $font-arimo: "Helvetica Neue", Helvetica, Arial, sans-serif;
-//   sans-serif;
 $font-size-main: 5.8rem;
 $font-size-sub: 3.6rem;
 $font-size-price: 4.8rem;
 $font-size-desc: 2rem;
+
+//breakpoint
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  //this site is mobile fast so the default is (0-767)
+  "medium": 768px,
+  "large": 1024px
+) !default;
+
+@mixin break($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+//layout
 
 @mixin flexLayout {
   display: flex;
@@ -52,22 +66,6 @@ body {
     #347475,
     #37888a
   );
-
-  // background-image: linear-gradient(
-  //   to right top,
-  //   #151b1b,
-  //   #192020,
-  //   #1d2424,
-  //   #212929,
-  //   #252e2e,
-  //   #293636,
-  //   #2d3f3f,
-  //   #314848,
-  //   #345758,
-  //   #366768,
-  //   #377779,
-  //   #37888a
-  // );
 }
 
 li {
@@ -83,6 +81,7 @@ a {
 //btn
 
 @mixin main_btn {
+  font-family: $font-sub;
   color: $color-white;
   font-size: 1.8rem;
   width: 160px;
@@ -91,7 +90,23 @@ a {
   padding: 0;
   border: none;
   background: $color-primary;
-  background: linear-gradient(0deg, rgb(172, 55, 4) 100% rgb(230, 64, 67) 0%);
+  border-radius: 8px;
+  // background: linear-gradient(0deg, rgb(172, 55, 4) 100% rgb(230, 64, 67) 0%);
+  background-image: linear-gradient(
+    to right,
+    #c52428,
+    #c72629,
+    #c9272a,
+    #cc292b,
+    #ce2a2c,
+    #d02d2f,
+    #d33133,
+    #d53436,
+    #d83a3c,
+    #db3f41,
+    #dd4547,
+    #e04a4c
+  );
 
   &:hover {
     color: $color-primary;
