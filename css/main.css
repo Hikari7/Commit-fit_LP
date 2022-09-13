@@ -35,6 +35,7 @@ a {
 }
 .hero {
   color: #e04a4c;
+  letter-spacing: -0.05em;
   text-transform: capitalize;
 }
 .hero .hero_img {
@@ -89,6 +90,7 @@ a {
     overflow: hidden;
   }
   .hero .hero_video {
+    vertical-align: bottom;
     min-height: 100vh;
     min-width: 100%;
   }
@@ -175,8 +177,13 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.section {
-  width: 86%;
+@media screen and (min-width: 768px) {
+  .search_place {
+    height: 30vh;
+  }
+}
+section {
+  width: 90%;
   margin: 56px auto;
 }
 
@@ -187,8 +194,8 @@ a {
 
 .section_desc {
   display: block;
-  margin: 42px auto;
-  width: 78%;
+  margin: 56px auto;
+  width: 80%;
 }
 
 .section_pic img {
@@ -244,7 +251,6 @@ a {
   }
 }
 .plan_cards {
-  width: 90%;
   margin: 24px auto;
   display: flex;
   justify-content: center;
@@ -269,20 +275,21 @@ a {
   padding: 48px;
 }
 .card_content .price_type {
+  margin-bottom: 36px;
   text-align: center;
   padding: 8px;
   width: 100px;
 }
 
-@media screen and (min-width: 768px) {
-  .card {
-    margin: 0 16px 32px;
-  }
-}
 .card_desc {
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
+@media screen and (min-width: 768px) {
+  .card {
+    margin: 0 24px 32px;
+  }
+}
 .contact {
   margin: 24px auto;
 }
@@ -358,7 +365,7 @@ body {
 }
 
 .hero .start_btn {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ebebeb;
   font-size: 1.8rem;
   width: 160px;
@@ -398,7 +405,7 @@ body {
   transition: 800ms ease all;
 }
 .hero .plan_btn {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ebebeb;
   font-size: 1.8rem;
   width: 160px;
@@ -440,6 +447,7 @@ body {
 
 .main-name {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
   text-align: center;
   font-size: 5.8rem;
@@ -480,13 +488,13 @@ body {
   }
 }
 .search_place {
-  background: rgba(55, 136, 138, 0.8);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(55, 136, 138, 0.3);
   backdrop-filter: blur(14.8px);
   -webkit-backdrop-filter: blur(14.8px);
 }
 .search_place .search_title {
   width: 500px;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 4.2rem;
@@ -536,6 +544,7 @@ input#search-bar:hover:-ms-placeholder {
 
 .section_title {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.05em;
   text-transform: capitalize;
   font-size: 4.2rem;
   color: #e04a4c;
@@ -546,7 +555,7 @@ input#search-bar:hover:-ms-placeholder {
   letter-spacing: 2px;
   line-height: 1.6;
   font-size: 2rem;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .about_list {
@@ -554,12 +563,11 @@ input#search-bar:hover:-ms-placeholder {
 }
 
 .about_item {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.028);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
 }
 .about_item:hover {
   background: transparent;
@@ -584,20 +592,24 @@ input#search-bar:hover:-ms-placeholder {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (min-width: 768px) {
+  .about .section_title {
+    font-size: 6rem;
+  }
+}
 .card {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.028);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+.card.premium {
+  background-image: linear-gradient(to right top, #2d7171, #008472, #159663, #49a545, #7eb00f);
 }
 
-.card_btn {
-  text-align: center;
-}
 .card_btn .start_btn {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ebebeb;
   font-size: 1.8rem;
   width: 160px;
@@ -643,6 +655,9 @@ input#search-bar:hover:-ms-placeholder {
   border-radius: 16px;
   margin-bottom: 16px;
 }
+.price_type.premium {
+  background-color: #daa520;
+}
 
 .price {
   font-size: 4.8rem;
@@ -652,15 +667,15 @@ input#search-bar:hover:-ms-placeholder {
 }
 
 .card_desc {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 2rem;
   line-height: 1.4;
-  text-transform: capitalize;
 }
 
 .card_ul {
   line-height: 2;
-  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  text-transform: capitalize;
 }
 
 .card_li {
@@ -678,12 +693,17 @@ input#search-bar:hover:-ms-placeholder {
   color: #999999;
 }
 
+@media screen and (min-width: 768px) {
+  .plans .section_title {
+    font-size: 6rem;
+  }
+}
 .contact .main-name {
   color: #e04a4c;
   font-size: 5.8rem;
 }
 .contact .start_btn {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ebebeb;
   font-size: 1.8rem;
   width: 160px;
@@ -723,6 +743,7 @@ input#search-bar:hover:-ms-placeholder {
   transition: 800ms ease all;
 }
 .contact .contact_form {
+  letter-spacing: -0.05em;
   text-transform: capitalize;
 }
 .contact .contact_label,
@@ -730,7 +751,7 @@ input#search-bar:hover:-ms-placeholder {
   font-size: 2rem;
 }
 .contact .contact_container {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 300px;
   font-size: 2rem;
   display: flex;
@@ -778,7 +799,7 @@ input#email-bar:hover:-ms-placeholder {
 
 .footer {
   color: #ebebeb;
-  font-size: "PT Sans", sans-serif;
+  font-size: "Poppins", sans-serif;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .footer .footer_title {

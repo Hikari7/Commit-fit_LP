@@ -37,7 +37,7 @@
 
     <!-- main -->
     <main>
-      <section class="hero">
+      <div class="hero">
         <div class="hero_wrap">
           <div class="hero_img"></div>
           <div class="video_wrap">
@@ -80,16 +80,16 @@
             <button class="plan_btn">See Plans</button>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- Search -->
-      <section class="search_place">
+      <div class="search_place">
         <h2 class="search_title">Find Your Place</h2>
         <form class="search-container">
           <input type="text" id="search-bar" placeholder="Zip code" />
           <i class="fa-solid fa-magnifying-glass"></i>
         </form>
-      </section>
+      </div>
       <!-- About -->
       <section class="section about" id="about">
         <h2 class="section_title">Why Commit fit?</h2>
@@ -149,7 +149,7 @@
               </h3>
               <p class="card_desc">
                 Whether you've taken a fitness hiatus or are starting for the
-                first time. Everything
+                first time. Nothing will change if you don't take action.
               </p>
               <ul class="card_ul">
                 <li class="card_li standard">Daily workouts</li>
@@ -159,11 +159,32 @@
                 <li class="card_li standard">Nutrition plan</li>
               </ul>
               <div class="card_btn">
-                <button class="start_btn"><span>Get Started</span></button>
+                <button class="start_btn">Get Started</button>
               </div>
             </div>
           </div>
-
+          <div class="card premium">
+            <div class="card_content">
+              <p class="price_type premium">Premium</p>
+              <h3 class="price">
+                $39<span>&ThickSpace;/&ThinSpace;month</span>
+              </h3>
+              <p class="card_desc">
+                Advanced support for demanding customers. You'll gains in
+                endurance, strength, mobility, and agility—all!
+              </p>
+              <ul class="card_ul">
+                <li class="card_li">Daily workouts</li>
+                <li class="card_li">Monthly check-ins</li>
+                <li class="card_li">Mobility and agility training</li>
+                <li class="card_li">Personal trainer</li>
+                <li class="card_li">Nutrition plan</li>
+              </ul>
+              <div class="card_btn">
+                <button class="start_btn">Get Started</button>
+              </div>
+            </div>
+          </div>
           <div class="card">
             <div class="card_content">
               <p class="price_type">Medium</p>
@@ -182,30 +203,7 @@
                 <li class="card_li standard">Nutrition plan</li>
               </ul>
               <div class="card_btn">
-                <button class="start_btn"><span>Get Started</span></button>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card_content">
-              <p class="price_type">Premium</p>
-              <h3 class="price">
-                $39<span>&ThickSpace;/&ThinSpace;month</span>
-              </h3>
-              <p class="card_desc">
-                Advanced support for demanding customers. You'll gains in
-                endurance, strength, mobility, and agility—all!
-              </p>
-              <ul class="card_ul">
-                <li class="card_li">Daily workouts</li>
-                <li class="card_li">Monthly check-ins</li>
-                <li class="card_li">Mobility and agility training</li>
-                <li class="card_li">Personal trainer</li>
-                <li class="card_li">Nutrition plan</li>
-              </ul>
-              <div class="card_btn">
-                <button class="start_btn"><span>Get Started</span></button>
+                <button class="start_btn">Get Started</button>
               </div>
             </div>
           </div>
@@ -214,7 +212,9 @@
       <section class="contact" id="contact">
         <div class="contact_main">
           <h2 class="main-name">Are You Ready?</h2>
-          <div class="about_pic"></div>
+          <div
+            class="background-image: linear-gradient(to right top, #378888, #00a58e, #0dc07e, #5ed85b, #a8eb12);"
+          ></div>
           <button class="start_btn">Get Started</button>
         </div>
         <div class="contact_form">

@@ -78,11 +78,11 @@
     .video_wrap {
       display: block;
       position: relative;
-
       overflow: hidden;
     }
 
     .hero_video {
+      vertical-align: bottom;
       min-height: 100vh;
       min-width: 100%;
     }
@@ -175,11 +175,16 @@
     @include centering(25%);
   }
 }
+@include break(map-get($breakpoints, "medium")) {
+  .search_place {
+    height: 30vh;
+  }
+}
 
 //section: common
 
-.section {
-  width: 86%;
+section {
+  width: 90%;
   margin: 56px auto;
 }
 .section_title {
@@ -189,8 +194,8 @@
 
 .section_desc {
   display: block;
-  margin: 42px auto;
-  width: 78%;
+  margin: 56px auto;
+  width: 80%;
 }
 
 //section: about
@@ -256,7 +261,6 @@
 //plan
 
 .plan_cards {
-  width: 90%;
   margin: 24px auto;
   display: flex;
   justify-content: center;
@@ -281,23 +285,21 @@
   padding: 48px;
 
   .price_type {
+    margin-bottom: 36px;
     text-align: center;
     padding: 8px;
     width: 100px;
   }
 }
 
+.card_desc {
+  margin-top: 24px;
+}
+
 @include break(map-get($breakpoints, "medium")) {
   .card {
-    margin: 0 16px 32px;
+    margin: 0 24px 32px;
   }
-}
-
-@include break(map-get($breakpoints, "large")) {
-}
-
-.card_desc {
-  margin-top: 16px;
 }
 
 //Contact
