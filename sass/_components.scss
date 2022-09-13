@@ -23,27 +23,23 @@ body {
   }
 }
 
-// @include break(map-get($breakpoints, "medium")) {
-//   // .header {
-//   //   opacity: .5;
-//   // }
-// }
-
 //hero
+
+.hero {
+  .start_btn {
+    @include main_btn;
+  }
+
+  .plan_btn {
+    @include main_btn;
+  }
+}
 
 .main-name {
   font-family: $font-main;
   @include textStyles(uppercase);
   text-align: center;
   font-size: $font-size-main;
-}
-
-.start_btn {
-  @include main_btn;
-}
-
-.plan_btn {
-  @include main_btn;
 }
 
 @include break(map-get($breakpoints, "medium")) {
@@ -163,8 +159,19 @@ input#search-bar {
 
 //section_plan
 
+// .start_btn {
+//   @include main_btn;
+// }
+
 .card {
   @include card_bg;
+}
+
+.card_btn {
+  text-align: center;
+  .start_btn {
+    @include main_btn;
+  }
 }
 
 .price_type {
@@ -210,11 +217,6 @@ input#search-bar {
   &.medium:nth-child(5) {
     text-decoration: line-through;
     color: #999999;
-  }
-  .start_btn {
-    @include main_btn;
-    display: block;
-    margin: 36px auto 0;
   }
 }
 

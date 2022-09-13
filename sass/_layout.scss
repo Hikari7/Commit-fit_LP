@@ -226,36 +226,6 @@
   height: 180px;
 }
 
-.plan_cards {
-  width: 80%;
-  margin: 24px auto;
-}
-
-.card {
-  outline: #fff solid 1px;
-  margin-top: 48px;
-
-  .card_ul {
-    margin: 24px 0;
-  }
-}
-
-.card_content {
-  width: 80%;
-  margin: 0 auto;
-  padding: 48px;
-
-  .price_type {
-    text-align: center;
-    padding: 8px;
-    width: 100px;
-  }
-}
-
-.card_desc {
-  margin-top: 16px;
-}
-
 @include break(map-get($breakpoints, "medium")) {
   .about_list {
     width: 65%;
@@ -281,6 +251,53 @@
     width: 40%;
     margin-right: 10%;
   }
+}
+
+//plan
+
+.plan_cards {
+  width: 90%;
+  margin: 24px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  outline: #fff solid 1px;
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  width: 450px;
+  align-items: center;
+
+  .card_ul {
+    margin: 24px;
+  }
+}
+.card_content {
+  width: 78%;
+  margin: 36px auto;
+  padding: 48px;
+
+  .price_type {
+    text-align: center;
+    padding: 8px;
+    width: 100px;
+  }
+}
+
+@include break(map-get($breakpoints, "medium")) {
+  .card {
+    margin: 0 16px 32px;
+  }
+}
+
+@include break(map-get($breakpoints, "large")) {
+}
+
+.card_desc {
+  margin-top: 16px;
 }
 
 //Contact
