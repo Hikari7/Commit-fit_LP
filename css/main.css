@@ -35,7 +35,6 @@ a {
 }
 .hero {
   color: #e04a4c;
-  letter-spacing: 1px;
   text-transform: capitalize;
 }
 .hero .hero_img {
@@ -52,26 +51,31 @@ a {
 }
 .hero .main-name {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .hero .start_btn {
   position: absolute;
   top: 60%;
-  right: 40%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
 }
 .hero .plan_btn {
   position: absolute;
   top: 70%;
-  right: 40%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
 }
+
+.hero {
+  position: relative;
+}
 @media screen and (min-width: 768px) {
-  .hero .hero {
-    position: relative;
-  }
   .hero .nav_menu,
 .hero .med {
     display: block;
@@ -121,28 +125,30 @@ a {
   }
   .hero .start_btn {
     position: absolute;
-    top: 65%;
-    right: 55%;
+    top: 55%;
+    left: 35%;
     z-index: 3;
   }
   .hero .plan_btn {
     position: absolute;
-    top: 65%;
-    right: 25%;
+    top: 55%;
+    right: 45%;
     z-index: 3;
+    margin-left: 120px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .hero .start_btn {
     position: absolute;
-    top: 65%;
-    right: 55%;
+    top: 60%;
+    left: 45%;
     z-index: 3;
   }
   .hero .plan_btn {
     position: absolute;
-    top: 65%;
-    right: 35%;
+    top: 60%;
+    right: 50%;
     z-index: 3;
   }
 }
@@ -167,7 +173,6 @@ a {
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3.6rem;
 }
 
 .section {
@@ -187,10 +192,11 @@ a {
 }
 
 .section_pic img {
+  border-radius: 8px;
   display: block;
   margin: 42px auto;
   justify-content: center;
-  width: 90%;
+  width: 60%;
   height: 40%;
 }
 
@@ -244,6 +250,27 @@ a {
   margin-top: 16px;
 }
 
+@media screen and (min-width: 768px) {
+  .about_list {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about_list {
+    display: flex;
+    width: 78%;
+    gap: 0;
+  }
+  .about_upper,
+.about_bottom {
+    display: flex;
+    margin-left: 0;
+  }
+  .about_item {
+    width: 40%;
+    margin-right: 10%;
+  }
+}
 .contact {
   margin: 24px auto;
 }
@@ -299,6 +326,10 @@ a {
   margin-top: 56px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #ebebeb;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -316,7 +347,6 @@ body {
 
 .main-name {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
   font-size: 5.8rem;
@@ -418,6 +448,17 @@ body {
     cursor: pointer;
   }
   .nav_link:hover {
+    color: #37888a;
+    transition: 0.35s ease;
+  }
+  .nav_link.btn {
+    background-color: #37888a;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+  }
+  .nav_link.btn:hover {
+    opacity: 0.8;
     color: #e04a4c;
     transition: 0.35s ease;
   }
@@ -435,10 +476,9 @@ body {
 }
 .search_place .search_title {
   width: 500px;
-  letter-spacing: 1px;
   text-transform: uppercase;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 3.6rem;
+  font-size: 4.2rem;
 }
 
 .search-container {
@@ -485,9 +525,8 @@ input#search-bar:hover:-ms-placeholder {
 
 .section_title {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
   text-transform: capitalize;
-  font-size: 3.6rem;
+  font-size: 4.2rem;
   color: #e04a4c;
 }
 
@@ -561,13 +600,11 @@ input#search-bar:hover:-ms-placeholder {
   font-family: "PT Sans", sans-serif;
   font-size: 2rem;
   line-height: 1.4;
-  letter-spacing: 1px;
   text-transform: capitalize;
 }
 
 .card_ul {
   line-height: 2;
-  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -673,7 +710,6 @@ input#search-bar:hover:-ms-placeholder {
   transition: 800ms ease all;
 }
 .contact .contact_form {
-  letter-spacing: 1px;
   text-transform: capitalize;
 }
 .contact .contact_label,

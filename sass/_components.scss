@@ -1,6 +1,10 @@
 @use "base" as *;
 
 //common
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: $color-white;
   font-family: $font-main;
@@ -59,8 +63,20 @@ body {
     cursor: pointer;
 
     &:hover {
-      color: $color-primary;
+      color: $color-secondary;
       transition: 0.35s ease;
+    }
+
+    &.btn {
+      background-color: $color-secondary;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      padding: 16px;
+      &:hover {
+        opacity: 0.8;
+        color: $color-primary;
+        transition: 0.35s ease;
+      }
     }
   }
 }

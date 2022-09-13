@@ -7,7 +7,7 @@ $font-main: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
 $font-sub: "PT Sans", sans-serif;
 
 $font-size-main: 5.8rem;
-$font-size-sub: 3.6rem;
+$font-size-sub: 4.2rem;
 $font-size-price: 4.8rem;
 $font-size-desc: 2rem;
 
@@ -42,7 +42,7 @@ $breakpoints: (
 
 @mixin textStyles($transform: uppercase) {
   // font-weight: 300;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
   text-transform: $transform;
 }
 

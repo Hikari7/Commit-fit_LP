@@ -40,31 +40,32 @@
   }
 
   .main-name {
-    @include centering(45%);
+    @include centering(40%);
   }
 
-  //😵もう少しいい方法ないか考える
   .start_btn {
     position: absolute;
     top: 60%;
-    right: 40%;
-    // transform: translate(-50%, -50%);
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 3;
   }
 
   .plan_btn {
     position: absolute;
     top: 70%;
-    right: 40%;
-    // transform: translate(-50%, -50%);
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 3;
   }
+}
+
+.hero {
+  position: relative;
 
   @include break(map-get($breakpoints, "medium")) {
-    .hero {
-      position: relative;
-    }
-
     .nav_menu,
     .med {
       display: block;
@@ -123,35 +124,39 @@
 
     .start_btn {
       position: absolute;
-      top: 65%;
-      right: 55%;
+      top: 55%;
+      left: 35%;
       z-index: 3;
     }
 
     .plan_btn {
       position: absolute;
-      top: 65%;
-      right: 25%;
+      top: 55%;
+      right: 45%;
       z-index: 3;
-    }
-  }
-
-  @include break(map-get($breakpoints, "large")) {
-    .start_btn {
-      position: absolute;
-      top: 65%;
-      right: 55%;
-      z-index: 3;
-    }
-    .plan_btn {
-      position: absolute;
-      top: 65%;
-      right: 35%;
-      z-index: 3;
+      margin-left: 120px;
     }
   }
 }
 
+//😵どうにかならないものか
+.hero {
+  @include break(map-get($breakpoints, "large")) {
+    .start_btn {
+      position: absolute;
+      top: 60%;
+      left: 45%;
+      z-index: 3;
+    }
+    .plan_btn {
+      position: absolute;
+      top: 60%;
+      right: 50%;
+      // margin-left: 110px;
+      z-index: 3;
+    }
+  }
+}
 //search
 
 .search-container {
@@ -168,7 +173,6 @@
 
   .search_title {
     @include centering(25%);
-    font-size: 3.6rem;
   }
 }
 
@@ -192,10 +196,11 @@
 //section: about
 
 .section_pic img {
+  border-radius: 8px;
   display: block;
   margin: 42px auto;
   justify-content: center;
-  width: 90%;
+  width: 60%;
   height: 40%;
 }
 
@@ -249,6 +254,33 @@
 
 .card_desc {
   margin-top: 16px;
+}
+
+@include break(map-get($breakpoints, "medium")) {
+  .about_list {
+    width: 65%;
+  }
+}
+
+@include break(map-get($breakpoints, "large")) {
+  .about_list {
+    display: flex;
+    width: 78%;
+    gap: 0;
+  }
+
+  .about_upper,
+  .about_bottom {
+    display: flex;
+    margin-left: 0;
+    // width: 50%;
+    // justify-content: space-evenly;
+  }
+
+  .about_item {
+    width: 40%;
+    margin-right: 10%;
+  }
 }
 
 //Contact
