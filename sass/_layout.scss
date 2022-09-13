@@ -12,6 +12,12 @@
   font-weight: 300;
 }
 
+@include break(map-get($breakpoints, "medium")) {
+  .header {
+    display: none;
+  }
+}
+
 //hero
 
 .hero {
@@ -27,7 +33,9 @@
     background-position: center;
   }
 
-  .video_wrap {
+  .video_wrap,
+  .nav_menu,
+  .med {
     display: none;
   }
 
@@ -35,14 +43,33 @@
     @include centering(45%);
   }
 
-  .plan_btn {
-    @include centering(65%);
-  }
+  //😵もう少しいい方法ないか考える
   .start_btn {
-    @include centering(75%);
+    position: absolute;
+    top: 60%;
+    right: 40%;
+    // transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  .plan_btn {
+    position: absolute;
+    top: 70%;
+    right: 40%;
+    // transform: translate(-50%, -50%);
+    z-index: 3;
   }
 
   @include break(map-get($breakpoints, "medium")) {
+    .hero {
+      position: relative;
+    }
+
+    .nav_menu,
+    .med {
+      display: block;
+    }
+
     .hero_img {
       display: none;
     }
@@ -50,9 +77,34 @@
     .video_wrap {
       display: block;
       position: relative;
-      height: 100vh;
-      width: 100%;
+
       overflow: hidden;
+    }
+
+    .hero_video {
+      min-height: 100vh;
+      min-width: 100%;
+    }
+
+    .nav_logo {
+      position: absolute;
+      top: 8%;
+      left: 8%;
+      z-index: 3;
+    }
+
+    .nav_menu {
+      position: absolute;
+      top: 8%;
+      right: 8%;
+      z-index: 3;
+
+      .nav_list {
+        display: flex;
+      }
+      .nav_item {
+        padding-left: 28px;
+      }
     }
 
     .video_wrap:before {
@@ -68,14 +120,36 @@
       background-size: cover;
       background-position: center;
     }
+
+    .start_btn {
+      position: absolute;
+      top: 65%;
+      right: 55%;
+      z-index: 3;
+    }
+
+    .plan_btn {
+      position: absolute;
+      top: 65%;
+      right: 25%;
+      z-index: 3;
+    }
   }
 
-  .hero_contents {
-    z-index: 3;
+  @include break(map-get($breakpoints, "large")) {
+    .start_btn {
+      position: absolute;
+      top: 65%;
+      right: 55%;
+      z-index: 3;
+    }
+    .plan_btn {
+      position: absolute;
+      top: 65%;
+      right: 35%;
+      z-index: 3;
+    }
   }
-  // @include break(map-get($breakpoints, "large")) {
-  //   // color: green;
-  // }
 }
 
 //search
@@ -140,7 +214,6 @@
 }
 
 .about_item {
-  //   border: 2px solid red;
   margin-top: 24px;
   text-align: center;
   align-items: center;

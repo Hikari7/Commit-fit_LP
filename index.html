@@ -31,20 +31,6 @@
         <!-- header mobileに後でactive要素つける -->
         <div class="header_mobile">
           <i class="fa-sharp fa-solid fa-bars"></i>
-          <div class="nav_menu">
-            <ul class="nav_list">
-              <li class="nav_item">
-                <a href="#" class="nav_link">About</a>
-              </li>
-              <li class="nav_item"><a href="#" class="nav_link">Pricing</a></li>
-              <li class="nav_item">
-                <a href="#" class="nav_link">Contact us</a>
-              </li>
-              <li class="nav_item join">
-                <a href="#" class="nav_link">Join now</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
     </header>
@@ -53,14 +39,7 @@
     <main>
       <section class="hero">
         <div class="hero_wrap">
-          <div class="hero_img">
-            <!-- <img
-              src="./img/graham-mansfield-E8VOttj22s4-unsplash.jpg"
-              alt="Placeholder"
-              class="hero_pic"
-            /> -->
-          </div>
-
+          <div class="hero_img"></div>
           <div class="video_wrap">
             <video
               src="./img/mixkit-man-and-woman-using-russian-kettlebell-727.mp4"
@@ -68,19 +47,40 @@
               loop
               muted
               playsinline
+              class="hero_video"
             >
               <img src="../img/graham-mansfield-E8VOttj22s4-unsplash.jpg" />
             </video>
+          </div>
+          <h1 class="nav_logo med">
+            <a href="#" class="logo" alt="logo">Commit Fit</a>
+          </h1>
+          <div class="nav_menu">
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="#" class="nav_link">About</a>
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_link">Pricing</a>
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_link">Contact us</a>
+              </li>
+              <li class="nav_item join">
+                <a href="#" class="nav_link">Join now</a>
+              </li>
+            </ul>
           </div>
 
           <div class="hero_contents">
             <h1 class="main-name">Commit to your<br />Body</h1>
           </div>
-          <button class="start_btn"><span>Get Started</span></button>
           <button class="plan_btn">See Plans</button>
+          <button class="start_btn">Get Started</button>
         </div>
       </section>
 
+      <!-- Search -->
       <section class="search_place">
         <h2 class="search_title">Find Your Place</h2>
         <form class="search-container">
@@ -231,5 +231,6 @@
       </ul>
       <p class="copyright">&copy; made by Hikari Kobe</p>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>

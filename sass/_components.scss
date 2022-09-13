@@ -5,14 +5,11 @@ body {
   color: $color-white;
   font-family: $font-main;
 }
+
 //header
 .logo {
   font-family: $font-main;
   display: block;
-}
-
-.nav_menu {
-  display: none;
 }
 
 .header_mobile {
@@ -22,26 +19,57 @@ body {
   }
 }
 
+// @include break(map-get($breakpoints, "medium")) {
+//   // .header {
+//   //   opacity: .5;
+//   // }
+// }
+
 //hero
-.hero_contents {
-  .main-name {
-    font-family: $font-main;
-    @include textStyles(uppercase);
-    text-align: center;
-    font-size: $font-size-main;
-  }
+
+.main-name {
+  font-family: $font-main;
+  @include textStyles(uppercase);
+  text-align: center;
+  font-size: $font-size-main;
 }
 
-.start_btn,
+.start_btn {
+  @include main_btn;
+}
+
 .plan_btn {
   @include main_btn;
 }
 
-.hero_video {
-  // 後で：show this property in desktop and tablet
-  // display: none;
+@include break(map-get($breakpoints, "medium")) {
+  .main-name {
+    font-size: $font-size-med-main;
+  }
+
+  .nav_logo {
+    font-size: $font-size-desc;
+  }
+
+  .nav_menu {
+    font-size: $font-size-desc;
+  }
+
+  .nav_link {
+    cursor: pointer;
+
+    &:hover {
+      color: $color-primary;
+      transition: 0.35s ease;
+    }
+  }
 }
 
+@include break(map-get($breakpoints, "large")) {
+  .main-name {
+    font-size: $font-size-lar-main;
+  }
+}
 // //search_place
 
 .search_place {
@@ -167,11 +195,11 @@ input#search-bar {
     text-decoration: line-through;
     color: #999999;
   }
-}
-.start_btn {
-  @include main_btn;
-  display: block;
-  margin: 36px auto 0;
+  .start_btn {
+    @include main_btn;
+    display: block;
+    margin: 36px auto 0;
+  }
 }
 
 //Contact

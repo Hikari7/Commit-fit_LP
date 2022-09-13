@@ -28,6 +28,11 @@ a {
   font-weight: 300;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    display: none;
+  }
+}
 .hero {
   color: #e04a4c;
   letter-spacing: 1px;
@@ -40,7 +45,9 @@ a {
   background-size: cover;
   background-position: center;
 }
-.hero .video_wrap {
+.hero .video_wrap,
+.hero .nav_menu,
+.hero .med {
   display: none;
 }
 .hero .main-name {
@@ -49,28 +56,55 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.hero .plan_btn {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .hero .start_btn {
   position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 60%;
+  right: 40%;
+  z-index: 3;
+}
+.hero .plan_btn {
+  position: absolute;
+  top: 70%;
+  right: 40%;
+  z-index: 3;
 }
 @media screen and (min-width: 768px) {
+  .hero .hero {
+    position: relative;
+  }
+  .hero .nav_menu,
+.hero .med {
+    display: block;
+  }
   .hero .hero_img {
     display: none;
   }
   .hero .video_wrap {
     display: block;
     position: relative;
-    height: 100vh;
-    width: 100%;
     overflow: hidden;
+  }
+  .hero .hero_video {
+    min-height: 100vh;
+    min-width: 100%;
+  }
+  .hero .nav_logo {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    z-index: 3;
+  }
+  .hero .nav_menu {
+    position: absolute;
+    top: 8%;
+    right: 8%;
+    z-index: 3;
+  }
+  .hero .nav_menu .nav_list {
+    display: flex;
+  }
+  .hero .nav_menu .nav_item {
+    padding-left: 28px;
   }
   .hero .video_wrap:before {
     content: "";
@@ -85,9 +119,32 @@ a {
     background-size: cover;
     background-position: center;
   }
+  .hero .start_btn {
+    position: absolute;
+    top: 65%;
+    right: 55%;
+    z-index: 3;
+  }
+  .hero .plan_btn {
+    position: absolute;
+    top: 65%;
+    right: 25%;
+    z-index: 3;
+  }
 }
-.hero .hero_contents {
-  z-index: 3;
+@media screen and (min-width: 1024px) {
+  .hero .start_btn {
+    position: absolute;
+    top: 65%;
+    right: 55%;
+    z-index: 3;
+  }
+  .hero .plan_btn {
+    position: absolute;
+    top: 65%;
+    right: 35%;
+    z-index: 3;
+  }
 }
 
 .search-container {
@@ -252,16 +309,12 @@ body {
   display: block;
 }
 
-.nav_menu {
-  display: none;
-}
-
 .header_mobile i {
   font-size: 2.4rem;
   cursor: pointer;
 }
 
-.hero_contents .main-name {
+.main-name {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -269,7 +322,47 @@ body {
   font-size: 5.8rem;
 }
 
-.start_btn,
+.start_btn {
+  font-family: "PT Sans", sans-serif;
+  color: #ebebeb;
+  font-size: 1.8rem;
+  width: 160px;
+  height: 55px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: #e04a4c;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #c52428, #c72629, #c9272a, #cc292b, #ce2a2c, #d02d2f, #d33133, #d53436, #d83a3c, #db3f41, #dd4547, #e04a4c);
+}
+.start_btn:hover {
+  color: #e04a4c;
+  background: transparent;
+  box-shadow: none;
+}
+.start_btn:before, .start_btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 100%;
+  right: 0;
+  height: 1px;
+  width: 0;
+  background: #e04a4c;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.1333333333);
+  transition: 400ms ease all;
+}
+.start_btn:after {
+  right: inherit;
+  top: 100%;
+  left: 0;
+  bottom: 0;
+}
+.start_btn:hover:before, .start_btn:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
 .plan_btn {
   font-family: "PT Sans", sans-serif;
   color: #ebebeb;
@@ -283,15 +376,12 @@ body {
   border-radius: 8px;
   background-image: linear-gradient(to right, #c52428, #c72629, #c9272a, #cc292b, #ce2a2c, #d02d2f, #d33133, #d53436, #d83a3c, #db3f41, #dd4547, #e04a4c);
 }
-.start_btn:hover,
 .plan_btn:hover {
   color: #e04a4c;
   background: transparent;
   box-shadow: none;
 }
-.start_btn:before, .start_btn:after,
-.plan_btn:before,
-.plan_btn:after {
+.plan_btn:before, .plan_btn:after {
   content: "";
   position: absolute;
   top: 0;
@@ -303,20 +393,40 @@ body {
   box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.1333333333);
   transition: 400ms ease all;
 }
-.start_btn:after,
 .plan_btn:after {
   right: inherit;
   top: 100%;
   left: 0;
   bottom: 0;
 }
-.start_btn:hover:before, .start_btn:hover:after,
-.plan_btn:hover:before,
-.plan_btn:hover:after {
+.plan_btn:hover:before, .plan_btn:hover:after {
   width: 100%;
   transition: 800ms ease all;
 }
 
+@media screen and (min-width: 768px) {
+  .main-name {
+    font-size: 7.2rem;
+  }
+  .nav_logo {
+    font-size: 2rem;
+  }
+  .nav_menu {
+    font-size: 2rem;
+  }
+  .nav_link {
+    cursor: pointer;
+  }
+  .nav_link:hover {
+    color: #e04a4c;
+    transition: 0.35s ease;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-name {
+    font-size: 8.6rem;
+  }
+}
 .search_place {
   background: rgba(55, 136, 138, 0.8);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -475,8 +585,7 @@ input#search-bar:hover:-ms-placeholder {
   text-decoration: line-through;
   color: #999999;
 }
-
-.start_btn {
+.card_li .start_btn {
   font-family: "PT Sans", sans-serif;
   color: #ebebeb;
   font-size: 1.8rem;
@@ -491,12 +600,12 @@ input#search-bar:hover:-ms-placeholder {
   display: block;
   margin: 36px auto 0;
 }
-.start_btn:hover {
+.card_li .start_btn:hover {
   color: #e04a4c;
   background: transparent;
   box-shadow: none;
 }
-.start_btn:before, .start_btn:after {
+.card_li .start_btn:before, .card_li .start_btn:after {
   content: "";
   position: absolute;
   top: 0;
@@ -508,13 +617,13 @@ input#search-bar:hover:-ms-placeholder {
   box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.1333333333);
   transition: 400ms ease all;
 }
-.start_btn:after {
+.card_li .start_btn:after {
   right: inherit;
   top: 100%;
   left: 0;
   bottom: 0;
 }
-.start_btn:hover:before, .start_btn:hover:after {
+.card_li .start_btn:hover:before, .card_li .start_btn:hover:after {
   width: 100%;
   transition: 800ms ease all;
 }
