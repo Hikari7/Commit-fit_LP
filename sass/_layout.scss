@@ -258,8 +258,6 @@ section {
   .about_bottom {
     display: flex;
     margin-left: 0;
-    // width: 50%;
-    // justify-content: space-evenly;
   }
 
   .about_item {
@@ -329,6 +327,14 @@ section {
     }
 
     .start_btn {
+      @include centering(65%);
+    }
+  }
+}
+
+@include break(map-get($breakpoints, "medium")) {
+  .contact {
+    .start_btn {
       @include centering(55%);
     }
   }
@@ -354,7 +360,7 @@ section {
 
 //footer
 .footer {
-  margin: 100px 0;
+  margin: 100px 0 56px;
   text-align: center;
 
   .footer_subtitle {
@@ -369,5 +375,6 @@ section {
 
   .copyright {
     margin-top: 56px;
+    font-size: 1.2rem;
   }
 }

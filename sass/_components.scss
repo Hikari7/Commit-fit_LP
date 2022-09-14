@@ -55,9 +55,10 @@ body {
 }
 
 .overlay li {
+  font-weight: 400;
   padding-top: 24px;
-  font-family: $font-sub;
   font-size: $font-size-desc;
+  font-family: $font-main;
   cursor: pointer;
   opacity: 0;
   transform: translateY(16px);
@@ -173,7 +174,12 @@ body {
 // //search_place
 
 .search_place {
-  background: rgba(55, 136, 138, 0.3);
+  background: linear-gradient(
+    rgba(55, 136, 138, 0.01),
+    rgba(55, 136, 138, 0.3),
+    rgba(55, 136, 138, 0.1)
+  );
+  // background: rgba(55, 136, 138, 0.3);
   backdrop-filter: blur(14.8px);
   -webkit-backdrop-filter: blur(14.8px);
 
@@ -227,15 +233,6 @@ input#search-bar {
 .about_item {
   @include card_bg;
   margin-top: 24px;
-
-  // &:hover {
-  //   background: transparent;
-  //   background: rgba(224, 74, 76, 0.46);
-  //   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  //   backdrop-filter: blur(5px);
-  //   -webkit-backdrop-filter: blur(5px);
-  //   transition: 800ms ease all;
-  // }
 
   .num {
     @include centering(35%);
@@ -403,6 +400,7 @@ input#email-bar {
 
 //footer
 .footer {
+  @include textStyles(capitalize);
   color: $color-white;
   font-size: $font-sub;
   font-family: $font-main;

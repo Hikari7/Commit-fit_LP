@@ -308,11 +308,19 @@ section {
 }
 .contact .contact_main .start_btn {
   position: absolute;
-  top: 55%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+@media screen and (min-width: 768px) {
+  .contact .start_btn {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .contact_form {
   text-align: center;
   margin-top: 24px;
@@ -329,7 +337,7 @@ section {
 }
 
 .footer {
-  margin: 100px 0;
+  margin: 100px 0 56px;
   text-align: center;
 }
 .footer .footer_subtitle {
@@ -343,6 +351,7 @@ section {
 }
 .footer .copyright {
   margin-top: 56px;
+  font-size: 1.2rem;
 }
 
 html {
@@ -397,9 +406,10 @@ body {
 }
 
 .overlay li {
+  font-weight: 400;
   padding-top: 24px;
-  font-family: "Poppins", sans-serif;
   font-size: 2rem;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   cursor: pointer;
   opacity: 0;
   transform: translateY(16px);
@@ -584,7 +594,7 @@ body {
   }
 }
 .search_place {
-  background: rgba(55, 136, 138, 0.3);
+  background: linear-gradient(rgba(55, 136, 138, 0.01), rgba(55, 136, 138, 0.3), rgba(55, 136, 138, 0.1));
   backdrop-filter: blur(14.8px);
   -webkit-backdrop-filter: blur(14.8px);
 }
@@ -659,11 +669,12 @@ input#search-bar:hover:-ms-placeholder {
 }
 
 .about_item {
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.028);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 24px;
 }
 .about_item .num {
@@ -687,11 +698,12 @@ input#search-bar:hover:-ms-placeholder {
   }
 }
 .card {
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.028);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .card.premium {
   background-image: linear-gradient(to right top, #2d7171, #008472, #159663, #49a545, #7eb00f);
@@ -906,6 +918,8 @@ input#email-bar:hover:-ms-placeholder {
 }
 
 .footer {
+  letter-spacing: -0.05em;
+  text-transform: capitalize;
   color: #ebebeb;
   font-size: "Poppins", sans-serif;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
