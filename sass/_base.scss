@@ -15,7 +15,7 @@ $font-size-med-main: 7.2rem;
 $font-size-med-sub: 6rem;
 
 $font-size-lar-main: 8.6rem;
-$font-size-lar-sub: 6.5rem;
+$font-size-lar-sub: rem;
 
 //breakpoint
 /// @prop {String} keys - Keys are identifiers mapped to a given length
@@ -58,7 +58,7 @@ html {
   font-size: 62.5%;
 }
 
-body {
+@mixin main_bg_color {
   background-image: linear-gradient(
     to right bottom,
     #222222,
@@ -74,6 +74,10 @@ body {
     #347475,
     #37888a
   );
+}
+
+body {
+  @include main_bg_color;
 }
 
 li {
