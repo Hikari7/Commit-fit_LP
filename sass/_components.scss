@@ -24,7 +24,7 @@ body {
 }
 
 .overlay {
-  position: fixed; //固定表示
+  position: fixed;
   @include main_bg_color;
   top: 0;
   bottom: 0;
@@ -349,6 +349,7 @@ input#search-bar {
   }
 
   .contact_title {
+    @include textStyles(capitalize);
     margin: 56px auto 0;
     font-family: $font-main;
     font-size: $font-size-sub;
@@ -374,7 +375,7 @@ input#search-bar {
     font-size: $font-size-desc;
   }
 
-  .contact_container {
+  .contact_wrap {
     font-family: $font-sub;
     width: 300px;
     font-size: $font-size-desc;
@@ -401,6 +402,7 @@ input#email-bar {
 //footer
 .footer {
   @include textStyles(capitalize);
+  background-color: #26282aab;
   color: $color-white;
   font-size: $font-sub;
   font-family: $font-main;

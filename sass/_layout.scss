@@ -18,19 +18,10 @@
   }
 }
 
-// .overlay {
-//   .nav_bar {
-//     width: 80%;
-//     margin: 36px auto;
-//     .close {
-//       // margin-left: auto;
-//     }
-//   }
-// }
-
 //hero
 
 .hero {
+  position: relative;
   color: $color-primary;
   @include textStyles(capitalize);
 
@@ -70,10 +61,6 @@
     transform: translate(-50%, -50%);
     z-index: 3;
   }
-}
-
-.hero {
-  position: relative;
 
   @include break(map-get($breakpoints, "medium")) {
     .nav_menu,
@@ -131,38 +118,26 @@
       background-size: cover;
       background-position: center;
     }
-
-    .start_btn {
-      position: absolute;
-      top: 55%;
-      left: 35%;
-      z-index: 3;
-    }
-
-    .plan_btn {
-      position: absolute;
-      top: 55%;
-      right: 45%;
-      z-index: 3;
-      margin-left: 120px;
-    }
   }
 }
 
-//😵どうにかならないものか
 .hero {
-  @include break(map-get($breakpoints, "large")) {
+  position: relative;
+
+  @include break(map-get($breakpoints, "medium")) {
     .start_btn {
       position: absolute;
       top: 60%;
-      left: 45%;
+      left: 50%;
+      transform: translateX(-110%);
       z-index: 3;
     }
+
     .plan_btn {
       position: absolute;
       top: 60%;
-      right: 50%;
-      // margin-left: 110px;
+      left: 50%;
+      transform: translateX(10%);
       z-index: 3;
     }
   }
@@ -185,19 +160,15 @@
     @include centering(25%);
   }
 }
-@include break(map-get($breakpoints, "medium")) {
-  .search_place {
-    height: 30vh;
-  }
-}
 
 //section: common
 
 section {
   width: 90%;
-  margin: 56px auto;
+  margin: 72px auto;
 }
 .section_title {
+  margin: 56px 0;
   text-align: center;
   display: block;
 }
@@ -213,9 +184,9 @@ section {
 .section_pic img {
   border-radius: 8px;
   display: block;
-  margin: 42px auto;
+  margin: 56px auto;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   height: 40%;
 }
 
@@ -313,8 +284,10 @@ section {
 //Contact
 
 .contact {
-  margin: 24px auto;
+  margin-bottom: 150px;
   .contact_main {
+    margin: 36px auto;
+    width: 100%;
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
       url(../img/sven-mieke-jO6vBWX9h9Y-unsplash.jpg);
@@ -328,6 +301,17 @@ section {
 
     .start_btn {
       @include centering(65%);
+    }
+  }
+
+  @include break(map-get($breakpoints, "medium")) {
+    .contact_container {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .contact_main {
+      width: 80%;
+      margin: 72px auto;
     }
   }
 }
@@ -353,15 +337,16 @@ section {
     margin-top: 36px;
   }
 
-  .contact_container {
+  .contact_wrap {
     margin: 12px auto;
   }
 }
 
 //footer
 .footer {
-  margin: 100px 0 56px;
+  margin: 0 auto;
   text-align: center;
+  padding: 26px 0;
 
   .footer_subtitle {
     margin-top: 8px;
@@ -369,12 +354,12 @@ section {
   .media_icons {
     width: 300px;
     justify-content: space-between;
-    margin: 56px auto;
+    margin: 26px auto;
     display: flex;
   }
 
   .copyright {
-    margin-top: 56px;
+    margin-top: 26px;
     font-size: 1.2rem;
   }
 }
