@@ -41,7 +41,7 @@ a {
 }
 .hero .hero_img {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(0, 0, 0, 0.6)), url(../img/graham-mansfield-E8VOttj22s4-unsplash.jpg);
   background-size: cover;
   background-position: center;
@@ -88,8 +88,8 @@ a {
   }
   .hero .hero_video {
     vertical-align: bottom;
-    min-height: 100vh;
-    min-width: 100%;
+    height: 100vh;
+    width: 100vw;
   }
   .hero .nav_logo {
     position: absolute;
@@ -130,14 +130,14 @@ a {
 @media screen and (min-width: 768px) {
   .hero .start_btn {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50%;
     transform: translateX(-110%);
     z-index: 3;
   }
   .hero .plan_btn {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50%;
     transform: translateX(10%);
     z-index: 3;
@@ -158,6 +158,9 @@ a {
   position: relative;
   height: 20vh;
   text-align: center;
+}
+.search_place .search_title {
+  width: 80%;
 }
 .search_place .search_title {
   position: absolute;
@@ -581,11 +584,11 @@ body {
   -webkit-backdrop-filter: blur(14.8px);
 }
 .search_place .search_title {
-  width: 500px;
   letter-spacing: -0.05em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 4.2rem;
+  font-size: 3.8rem;
+  color: #ebebeb;
 }
 
 .search-container {
@@ -838,16 +841,16 @@ input#search-bar:hover:-ms-placeholder {
   color: #37888a;
   padding-bottom: 26px;
   border-bottom: #2d7171 solid 1px;
-  width: 500px;
+  width: 300px;
 }
 @media screen and (min-width: 768px) {
   .contact .contact_title {
-    width: 800px;
+    width: 500px;
   }
 }
 @media screen and (min-width: 1024px) {
   .contact .contact_title {
-    width: 1000px;
+    width: 500px;
   }
 }
 .contact .contact_label {

@@ -2,6 +2,8 @@
 
 //header
 
+
+
 .header {
   @include flexLayout;
   width: 80%;
@@ -27,7 +29,8 @@
 
   .hero_img {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    // min-height: 100rem;
     background-image: linear-gradient(rgba(19, 19, 19, 0.8), rgba(0, 0, 0, 0.6)),
       url(../img/graham-mansfield-E8VOttj22s4-unsplash.jpg);
     background-size: cover;
@@ -80,8 +83,8 @@
 
     .hero_video {
       vertical-align: bottom;
-      min-height: 100vh;
-      min-width: 100%;
+      height: 100vh;
+      width: 100vw;
     }
 
     .nav_logo {
@@ -127,7 +130,7 @@
   @include break(map-get($breakpoints, "medium")) {
     .start_btn {
       position: absolute;
-      top: 60%;
+      top: 70%;
       left: 50%;
       transform: translateX(-110%);
       z-index: 3;
@@ -135,7 +138,7 @@
 
     .plan_btn {
       position: absolute;
-      top: 60%;
+      top: 70%;
       left: 50%;
       transform: translateX(10%);
       z-index: 3;
@@ -155,6 +158,10 @@
   position: relative;
   height: 20vh;
   text-align: center;
+
+  .search_title {
+    width: 80%;
+  }
 
   .search_title {
     @include centering(25%);
@@ -296,6 +303,7 @@ section {
 
 .contact {
   margin-bottom: 150px;
+
   .contact_main {
     border-radius: 8px;
     margin: 36px auto;

@@ -162,10 +162,10 @@ body {
   -webkit-backdrop-filter: blur(14.8px);
 
   .search_title {
-    width: 500px;
-    @include textStyles(uppercase);
+    @include textStyles(capitalize);
     font-family: $font-main;
-    font-size: $font-size-sub;
+    font-size: 3.8rem;
+    color: $color-white;
   }
 }
 
@@ -330,17 +330,17 @@ input#search-bar {
     color: $color-secondary;
     padding-bottom: 26px;
     border-bottom: #2d7171 solid 1px;
-    width: 500px;
+    width: 300px;
   }
 
   @include break(map-get($breakpoints, "medium")) {
     .contact_title {
-      width: 800px;
+      width: 500px;
     }
   }
   @include break(map-get($breakpoints, "large")) {
     .contact_title {
-      width: 1000px;
+      width: 500px;
     }
   }
 
