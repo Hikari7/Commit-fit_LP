@@ -181,13 +181,30 @@ section {
 
 //section: about
 
-.section_pic img {
+// .section_pic img {
+//   border-radius: 16px;
+//   display: block;
+//   margin: 56px auto;
+//   justify-content: center;
+//   width: 80%;
+//   height: 35vh;
+// }
+
+.section_pic {
   border-radius: 16px;
-  display: block;
   margin: 56px auto;
-  justify-content: center;
   width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+    url(../img/sven-mieke-Lx_GDv7VA9M-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
   height: 35vh;
+}
+
+@include break(map-get($breakpoints, "medium")) {
+  .section_pic {
+    height: 600px;
+  }
 }
 
 .about_list {
@@ -308,6 +325,10 @@ section {
       @include centering(65%);
     }
   }
+
+  // .appear_pics {
+  //   display: block;
+  // }
 
   @include break(map-get($breakpoints, "medium")) {
     .contact_container {

@@ -27,12 +27,13 @@ about.addEventListener("click", () => {
   overlay.classList.remove("show");
 });
 
-//appear about
+//ease-in
 const upperItems = document.querySelectorAll(".upper_hidden");
 const bottomItems = document.querySelectorAll(".bottom_hidden");
 const cards = document.querySelectorAll(".card");
+const appearPics = document.querySelectorAll(".appear_sections");
 
-function showItem() {
+function showElements() {
   const scrolled = window.scrollY; //ユーザーがスクロールした分
   upperItems.forEach((uItem) => {
     const topItem = uItem.offsetTop;
@@ -54,6 +55,13 @@ function showItem() {
       card.classList.add("appear_card");
     }
   });
+
+  appearPics.forEach((appearPic) => {
+    const topPic = appearPic.offsetTop;
+    if (scrolled + window.innerHeight > topPic) {
+      appearPic.classList.add("appear");
+    }
+  });
 }
 
-window.addEventListener("scroll", showItem);
+window.addEventListener("scroll", showElements);
