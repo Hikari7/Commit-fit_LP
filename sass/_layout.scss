@@ -182,12 +182,12 @@ section {
 //section: about
 
 .section_pic img {
-  border-radius: 8px;
+  border-radius: 16px;
   display: block;
   margin: 56px auto;
   justify-content: center;
   width: 80%;
-  height: 40%;
+  height: 35vh;
 }
 
 .about_list {
@@ -205,7 +205,7 @@ section {
 }
 
 .about_item {
-  margin-top: px;
+  // margin-top: px;
   text-align: center;
   align-items: center;
   padding: 24px;
@@ -215,6 +215,10 @@ section {
 @include break(map-get($breakpoints, "medium")) {
   .about_list {
     width: 65%;
+  }
+
+  .section_pic img {
+    height: 60%;
   }
 }
 
@@ -286,6 +290,7 @@ section {
 .contact {
   margin-bottom: 150px;
   .contact_main {
+    border-radius: 8px;
     margin: 36px auto;
     width: 100%;
     position: relative;

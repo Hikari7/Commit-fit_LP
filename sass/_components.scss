@@ -80,27 +80,6 @@ body {
   }
 }
 
-.overlay.show li:nth-child(1) {
-  transition-delay: 0.2s;
-}
-.overlay.show li:nth-child(2) {
-  transition-delay: 0.3s;
-}
-.overlay.show li:nth-child(3) {
-  transition-delay: 0.4s;
-}
-.overlay.show li:nth-child(4) {
-  transition-delay: 0.5s;
-}
-.overlay.show li:nth-child(5) {
-  transition-delay: 0.6s;
-}
-
-.overlay.show li {
-  opacity: 1;
-  transform: none;
-}
-
 .overlay ul {
   margin-top: 4%;
 
@@ -175,9 +154,9 @@ body {
 
 .search_place {
   background: linear-gradient(
-    rgba(55, 136, 138, 0.01),
+    rgba(0, 0, 0, 0.01),
     rgba(55, 136, 138, 0.3),
-    rgba(55, 136, 138, 0.1)
+    rgba(0, 0, 0, 0.01)
   );
   // background: rgba(55, 136, 138, 0.3);
   backdrop-filter: blur(14.8px);
@@ -253,10 +232,6 @@ input#search-bar {
 }
 
 //section_plan
-
-// .start_btn {
-//   @include main_btn;
-// }
 
 .card {
   @include card_bg;
@@ -372,7 +347,7 @@ input#search-bar {
 
   .contact_label {
     @include textStyles(capitalize);
-    font-size: $font-size-desc;
+    font-size: 32px;
   }
 
   .contact_wrap {
@@ -408,7 +383,7 @@ input#email-bar {
   font-family: $font-main;
 
   .footer_title {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .media_icons {

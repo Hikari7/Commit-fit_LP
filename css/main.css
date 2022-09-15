@@ -184,12 +184,12 @@ section {
 }
 
 .section_pic img {
-  border-radius: 8px;
+  border-radius: 16px;
   display: block;
   margin: 56px auto;
   justify-content: center;
   width: 80%;
-  height: 40%;
+  height: 35vh;
 }
 
 .about_list {
@@ -207,7 +207,6 @@ section {
 }
 
 .about_item {
-  margin-top: px;
   text-align: center;
   align-items: center;
   padding: 24px;
@@ -217,6 +216,9 @@ section {
 @media screen and (min-width: 768px) {
   .about_list {
     width: 65%;
+  }
+  .section_pic img {
+    height: 60%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -279,6 +281,7 @@ section {
   margin-bottom: 150px;
 }
 .contact .contact_main {
+  border-radius: 8px;
   margin: 36px auto;
   width: 100%;
   position: relative;
@@ -430,31 +433,6 @@ body {
   transition: 0.35s ease;
 }
 
-.overlay.show li:nth-child(1) {
-  transition-delay: 0.2s;
-}
-
-.overlay.show li:nth-child(2) {
-  transition-delay: 0.3s;
-}
-
-.overlay.show li:nth-child(3) {
-  transition-delay: 0.4s;
-}
-
-.overlay.show li:nth-child(4) {
-  transition-delay: 0.5s;
-}
-
-.overlay.show li:nth-child(5) {
-  transition-delay: 0.6s;
-}
-
-.overlay.show li {
-  opacity: 1;
-  transform: none;
-}
-
 .overlay ul {
   margin-top: 4%;
 }
@@ -592,7 +570,7 @@ body {
   }
 }
 .search_place {
-  background: linear-gradient(rgba(55, 136, 138, 0.01), rgba(55, 136, 138, 0.3), rgba(55, 136, 138, 0.1));
+  background: linear-gradient(rgba(0, 0, 0, 0.01), rgba(55, 136, 138, 0.3), rgba(0, 0, 0, 0.01));
   backdrop-filter: blur(14.8px);
   -webkit-backdrop-filter: blur(14.8px);
 }
@@ -868,7 +846,7 @@ input#search-bar:hover:-ms-placeholder {
 .contact .contact_label {
   letter-spacing: -0.05em;
   text-transform: capitalize;
-  font-size: 2rem;
+  font-size: 32px;
 }
 .contact .contact_wrap {
   font-family: "Poppins", sans-serif;
@@ -926,7 +904,7 @@ input#email-bar:hover:-ms-placeholder {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .footer .footer_title {
-  font-size: 16px;
+  font-size: 22px;
 }
 .footer .media_icons {
   font-size: 24px;
@@ -935,6 +913,83 @@ input#email-bar:hover:-ms-placeholder {
   color: #e04a4c;
   cursor: pointer;
   transition: 0.35s ease;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.overlay.show li:nth-child(4) {
+  transition-delay: 0.5s;
+}
+
+.overlay.show li:nth-child(5) {
+  transition-delay: 0.6s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.upper_hidden,
+.bottom_hidden,
+.card_hidden {
+  transition: all 1s;
+  opacity: 0;
+  transform: translateY(90px);
+}
+
+.appear_upper,
+.appear_bottom,
+.appear_card {
+  opacity: 1;
+  transform: none;
+}
+
+.appear_upper:nth-child(1),
+.appear_card:nth-child(1) {
+  transition-delay: 0.8s;
+}
+.appear_upper:nth-child(2),
+.appear_card:nth-child(2) {
+  transition-delay: 0.9s;
+}
+.appear_upper:nth-child(3),
+.appear_card:nth-child(3) {
+  transition-delay: 1s;
+}
+
+.appear_bottom:nth-child(1) {
+  transition-delay: 1s;
+}
+.appear_bottom:nth-child(2) {
+  transition-delay: 1.1s;
+}
+
+.card:hover,
+.about_item:hover {
+  transition: 0.5s;
+  animation-name: animation_hover;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes animation_hover {
+  from {
+    transform: translateY(3%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
