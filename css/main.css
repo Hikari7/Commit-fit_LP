@@ -843,20 +843,23 @@ input#search-bar:hover:-ms-placeholder {
   border-bottom: #2d7171 solid 1px;
   width: 300px;
 }
+.contact .contact_label {
+  letter-spacing: -0.05em;
+  text-transform: capitalize;
+  font-size: 18px;
+}
 @media screen and (min-width: 768px) {
   .contact .contact_title {
     width: 500px;
+  }
+  .contact .contact_label {
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 1024px) {
   .contact .contact_title {
     width: 500px;
   }
-}
-.contact .contact_label {
-  letter-spacing: -0.05em;
-  text-transform: capitalize;
-  font-size: 32px;
 }
 .contact .contact_wrap {
   font-family: "Poppins", sans-serif;

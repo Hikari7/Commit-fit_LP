@@ -333,20 +333,22 @@ input#search-bar {
     width: 300px;
   }
 
+  .contact_label {
+    @include textStyles(capitalize);
+    font-size: 18px;
+  }
   @include break(map-get($breakpoints, "medium")) {
     .contact_title {
       width: 500px;
+    }
+    .contact_label {
+      font-size: 24px;
     }
   }
   @include break(map-get($breakpoints, "large")) {
     .contact_title {
       width: 500px;
     }
-  }
-
-  .contact_label {
-    @include textStyles(capitalize);
-    font-size: 32px;
   }
 
   .contact_wrap {
