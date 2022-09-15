@@ -158,7 +158,6 @@ body {
     rgba(55, 136, 138, 0.3),
     rgba(0, 0, 0, 0.01)
   );
-  // background: rgba(55, 136, 138, 0.3);
   backdrop-filter: blur(14.8px);
   -webkit-backdrop-filter: blur(14.8px);
 
@@ -249,6 +248,7 @@ input#search-bar {
 }
 .card_btn {
   .start_btn {
+    position: relative;
     @include main_btn;
   }
 }
@@ -274,7 +274,6 @@ input#search-bar {
   font-family: $font-sub;
   font-size: $font-size-desc;
   line-height: 1.4;
-  // @include textStyles(capitalize);
 }
 
 .card_ul {

@@ -181,15 +181,6 @@ section {
 
 //section: about
 
-// .section_pic img {
-//   border-radius: 16px;
-//   display: block;
-//   margin: 56px auto;
-//   justify-content: center;
-//   width: 80%;
-//   height: 35vh;
-// }
-
 .section_pic {
   border-radius: 16px;
   margin: 56px auto;
@@ -222,7 +213,6 @@ section {
 }
 
 .about_item {
-  // margin-top: px;
   text-align: center;
   align-items: center;
   padding: 24px;
@@ -258,7 +248,7 @@ section {
   }
 }
 
-//plan
+//section: plan
 
 .plan_cards {
   margin: 24px auto;
@@ -302,7 +292,7 @@ section {
   }
 }
 
-//Contact
+//section: contact
 
 .contact {
   margin-bottom: 150px;
@@ -325,10 +315,6 @@ section {
       @include centering(65%);
     }
   }
-
-  // .appear_pics {
-  //   display: block;
-  // }
 
   @include break(map-get($breakpoints, "medium")) {
     .contact_container {

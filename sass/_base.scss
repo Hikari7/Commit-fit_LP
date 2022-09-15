@@ -18,8 +18,8 @@ $font-size-lar-main: 8.6rem;
 $font-size-lar-sub: rem;
 
 //breakpoint
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @prop {String} keys 
+/// @prop {Map} values 
 $breakpoints: (
   //this site is mobile fast so the default is (0-767)
   "medium": 768px,
@@ -87,7 +87,6 @@ a {
   color: $color-white;
 }
 
-//comoonents
 //btn
 
 @mixin main_btn {

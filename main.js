@@ -34,7 +34,7 @@ const cards = document.querySelectorAll(".card");
 const appearPics = document.querySelectorAll(".appear_sections");
 
 function showElements() {
-  const scrolled = window.scrollY; //ユーザーがスクロールした分
+  const scrolled = window.scrollY; 
   upperItems.forEach((uItem) => {
     const topItem = uItem.offsetTop;
     if (scrolled + window.innerHeight > topItem) {

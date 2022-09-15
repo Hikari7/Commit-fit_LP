@@ -693,6 +693,7 @@ input#search-bar:hover:-ms-placeholder {
 }
 
 .card_btn .start_btn {
+  position: relative;
   font-family: "Poppins", sans-serif;
   color: #ebebeb;
   font-size: 1.8rem;
