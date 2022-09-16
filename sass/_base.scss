@@ -16,9 +16,7 @@ $font-size-med-sub: 6rem;
 
 $font-size-lar-main: 8.6rem;
 
-//breakpoint
-/// @prop {String} keys 
-/// @prop {Map} values 
+// breakpoint
 $breakpoints: (
   //this site is mobile fast so the default is (0-767)
   "medium": 768px,
