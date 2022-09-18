@@ -87,9 +87,9 @@ a {
     overflow: hidden;
   }
   .hero .hero_video {
-    min-width: 100vw;
-    min-height: 100vh;
     vertical-align: bottom;
+    height: 100vh;
+    width: 100vw;
   }
   .hero .nav_logo {
     position: absolute;
@@ -621,14 +621,17 @@ input#search-bar:hover {
   color: #ebebeb;
 }
 input#search-bar:hover::-webkit-input-placeholder {
+  -webkit-transition: opacity 0.45s ease;
   transition: opacity 0.45s ease;
   opacity: 0;
 }
 input#search-bar:hover::-moz-placeholder {
+  -moz-transition: opacity 0.45s ease;
   transition: opacity 0.45s ease;
   opacity: 0;
 }
 input#search-bar:hover:-ms-placeholder {
+  -ms-transition: opacity 0.45s ease;
   transition: opacity 0.45s ease;
   opacity: 0;
 }
@@ -884,14 +887,17 @@ input#email-bar:hover {
   color: #ebebeb;
 }
 input#email-bar:hover::-webkit-input-placeholder {
+  -webkit-transition: opacity 0.45s ease;
   transition: opacity 0.45s ease;
   opacity: 0;
 }
 input#email-bar:hover::-moz-placeholder {
+  -moz-transition: opacity 0.45s ease;
   transition: opacity 0.45s ease;
   opacity: 0;
 }
 input#email-bar:hover:-ms-placeholder {
+  -ms-transition: opacity 0.45s ease;
   transition: opacity 0.45s ease;
   opacity: 0;
 }
@@ -996,9 +1002,21 @@ input#email-bar:hover:-ms-placeholder {
 .card:hover,
 .about_item:hover {
   transition: 0.5s;
-  animation-name: animation_hover;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
+  -webkit-animation-name: animation_hover;
+          animation-name: animation_hover;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes animation_hover {
+  from {
+    transform: translateY(3%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 
 @keyframes animation_hover {
@@ -1011,9 +1029,21 @@ input#email-bar:hover:-ms-placeholder {
 }
 .media_icon:hover {
   transition: 0.5s;
-  animation-name: media_hover;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
+  -webkit-animation-name: media_hover;
+          animation-name: media_hover;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes media_hover {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 
 @keyframes media_hover {
@@ -1023,6 +1053,4 @@ input#email-bar:hover:-ms-placeholder {
   to {
     transform: translateY(0%);
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
